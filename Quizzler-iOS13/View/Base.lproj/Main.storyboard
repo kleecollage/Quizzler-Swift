@@ -25,8 +25,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fal-oS-tEg">
                                 <rect key="frame" x="20" y="96" width="374" height="732"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYa-lT-oOf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="105.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="532"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="374" height="416.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -70,6 +76,10 @@
                                         <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rSI-li-mhO" secondAttribute="trailing" id="CKc-oz-FzR"/>
+                                    <constraint firstItem="rSI-li-mhO" firstAttribute="leading" secondItem="fal-oS-tEg" secondAttribute="leading" id="Wom-ED-28k"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +98,7 @@
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="qQm-ze-EEq"/>
                         <outlet property="progessBar" destination="TXm-qh-7Xg" id="UCL-nz-YKT"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="PJ5-W1-wjn"/>
+                        <outlet property="scoreLabel" destination="yYa-lT-oOf" id="r5C-RZ-APA"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="QZi-Uv-QAt"/>
                     </connections>
                 </viewController>
